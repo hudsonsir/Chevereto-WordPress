@@ -1,0 +1,273 @@
+/* assets/css/block-editor.css */
+
+/* 错误状态样式 */
+.chevereto-block-error {
+    padding: 20px;
+    border: 2px dashed #dc3232;
+    border-radius: 8px;
+    background: #f9f9f9;
+    text-align: center;
+    color: #dc3232;
+}
+
+.chevereto-block-error p {
+    margin: 0 0 10px 0;
+    font-weight: 500;
+}
+
+.chevereto-block-error a {
+    color: #0073aa;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.chevereto-block-error a:hover {
+    text-decoration: underline;
+}
+
+/* 上传区域样式 */
+.chevereto-block-upload-area {
+    position: relative;
+    border: 2px dashed #0073aa;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chevereto-block-upload-area:hover {
+    border-color: #005a87;
+    background: #f0f6fc;
+}
+
+.chevereto-block-upload-area.is-drop-zone-over {
+    border-color: #00a32a;
+    background: #f0f6fc;
+    box-shadow: 0 0 20px rgba(0, 163, 42, 0.2);
+}
+
+.chevereto-block-upload-content {
+    z-index: 2;
+    position: relative;
+}
+
+.chevereto-block-upload-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.7;
+}
+
+.chevereto-block-upload-area p {
+    margin: 8px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+.chevereto-block-upload-or {
+    font-size: 14px !important;
+    opacity: 0.6;
+}
+
+.chevereto-block-upload-area .components-button {
+    margin-top: 16px;
+    padding: 12px 24px;
+    font-size: 14px;
+}
+
+/* 上传中状态 */
+.chevereto-block-uploading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    z-index: 10;
+}
+
+.chevereto-block-uploading .components-spinner {
+    margin-bottom: 12px;
+}
+
+.chevereto-block-uploading p {
+    margin: 0;
+    color: #0073aa;
+    font-weight: 500;
+}
+
+/* 图片预览样式 */
+.chevereto-block-preview {
+    position: relative;
+    margin: 20px 0;
+}
+
+.chevereto-block-figure {
+    margin: 0;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.chevereto-block-figure:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.chevereto-block-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+.chevereto-block-title {
+    padding: 12px 16px 8px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    background: #fff;
+    border-top: 1px solid #f0f0f0;
+}
+
+.chevereto-block-description {
+    padding: 0 16px 12px;
+    margin: 0;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+    background: #fff;
+}
+
+/* 操作按钮 */
+.chevereto-block-actions {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.chevereto-block-actions .components-button {
+    font-size: 13px;
+}
+
+/* 对齐样式 */
+.chevereto-block-preview.alignleft {
+    text-align: left;
+}
+
+.chevereto-block-preview.aligncenter {
+    text-align: center;
+}
+
+.chevereto-block-preview.alignright {
+    text-align: right;
+}
+
+/* 侧边栏样式 */
+.components-panel__body .chevereto-block-url-input {
+    width: 100%;
+    font-size: 12px;
+    font-family: monospace;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+}
+
+/* 通知样式调整 */
+.components-notice.is-error {
+    margin: 16px 0;
+}
+
+.components-notice.is-success {
+    margin: 16px 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .chevereto-block-upload-area {
+        padding: 30px 15px;
+        min-height: 150px;
+    }
+    
+    .chevereto-block-upload-icon {
+        font-size: 36px;
+    }
+    
+    .chevereto-block-upload-area p {
+        font-size: 14px;
+    }
+    
+    .chevereto-block-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .chevereto-block-actions .components-button {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* 拖拽高亮 */
+.chevereto-block-upload-area .components-drop-zone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+}
+
+.chevereto-block-upload-area .components-drop-zone__content {
+    display: none;
+}
+
+/* 加载动画 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.chevereto-block-preview,
+.chevereto-block-upload-area {
+    animation: fadeIn 0.3s ease;
+}
+
+/* 编辑器内的特殊样式 */
+.wp-block-chevereto-block-image-uploader {
+    margin: 16px 0;
+}
+
+.wp-block-chevereto-block-image-uploader .chevereto-block-figure {
+    max-width: 100%;
+}
+
+/* 对齐工具栏样式 */
+.block-editor-block-toolbar .components-toolbar-group {
+    border-radius: 4px;
+}
+
+/* 文件上传按钮样式 */
+.chevereto-block-upload-area .components-form-file-upload {
+    display: inline-block;
+}
+
+.chevereto-block-actions .components-form-file-upload {
+    display: inline-block;
+}

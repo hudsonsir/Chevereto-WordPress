@@ -1,0 +1,307 @@
+/* assets/css/block-style.css */
+
+/* 占位符样式（当没有图片时） */
+.chevereto-block-placeholder {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    color: #6c757d;
+    font-style: italic;
+    margin: 16px 0;
+}
+
+/* 主容器样式 */
+.chevereto-block-wrapper {
+    margin: 24px 0;
+    clear: both;
+}
+
+/* 对齐样式 */
+.chevereto-block-wrapper.alignleft {
+    float: left;
+    margin-right: 24px;
+    margin-bottom: 16px;
+}
+
+.chevereto-block-wrapper.alignright {
+    float: right;
+    margin-left: 24px;
+    margin-bottom: 16px;
+}
+
+.chevereto-block-wrapper.aligncenter {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chevereto-block-wrapper.alignwide {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chevereto-block-wrapper.alignfull {
+    max-width: none;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+/* 图片容器样式 */
+.chevereto-block-figure {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.chevereto-block-figure:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+/* 图片样式 */
+.chevereto-block-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    transition: opacity 0.3s ease;
+}
+
+.chevereto-block-image:hover {
+    opacity: 0.95;
+}
+
+/* 标题样式 */
+.chevereto-block-title {
+    padding: 16px 20px 8px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    line-height: 1.4;
+    background: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* 描述样式 */
+.chevereto-block-description {
+    padding: 0 20px 16px;
+    margin: 0;
+    font-size: 14px;
+    color: #718096;
+    line-height: 1.5;
+    background: #ffffff;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .chevereto-block-wrapper.alignwide {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .chevereto-block-wrapper.alignleft,
+    .chevereto-block-wrapper.alignright {
+        float: none;
+        margin: 16px auto;
+        text-align: center;
+    }
+    
+    .chevereto-block-figure {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    
+    .chevereto-block-title {
+        font-size: 15px;
+        padding: 12px 16px 6px;
+    }
+    
+    .chevereto-block-description {
+        font-size: 13px;
+        padding: 0 16px 12px;
+    }
+    
+    .chevereto-block-wrapper {
+        margin: 16px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .chevereto-block-figure {
+        border-radius: 6px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+    
+    .chevereto-block-title {
+        font-size: 14px;
+        padding: 10px 12px 4px;
+    }
+    
+    .chevereto-block-description {
+        font-size: 12px;
+        padding: 0 12px 10px;
+        line-height: 1.4;
+    }
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+    .chevereto-block-figure {
+        background: #2d3748;
+        border-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .chevereto-block-figure:hover {
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+    
+    .chevereto-block-title {
+        color: #f7fafc;
+        background: #2d3748;
+        border-top-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .chevereto-block-description {
+        color: #a0aec0;
+        background: #2d3748;
+    }
+    
+    .chevereto-block-placeholder {
+        background: #2d3748;
+        border-color: #4a5568;
+        color: #a0aec0;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    .chevereto-block-wrapper {
+        break-inside: avoid;
+        margin: 16px 0;
+    }
+    
+    .chevereto-block-figure {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .chevereto-block-figure:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .chevereto-block-title {
+        font-size: 14px;
+        color: #000;
+    }
+    
+    .chevereto-block-description {
+        font-size: 12px;
+        color: #333;
+    }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+    .chevereto-block-figure {
+        border: 2px solid #000;
+        box-shadow: none;
+    }
+    
+    .chevereto-block-title {
+        color: #000;
+        border-top: 1px solid #000;
+    }
+    
+    .chevereto-block-description {
+        color: #333;
+    }
+}
+
+/* 减少动画模式 */
+@media (prefers-reduced-motion: reduce) {
+    .chevereto-block-figure {
+        transition: none;
+    }
+    
+    .chevereto-block-figure:hover {
+        transform: none;
+    }
+    
+    .chevereto-block-image {
+        transition: none;
+    }
+}
+
+/* 特殊布局样式 */
+.chevereto-block-wrapper.has-title .chevereto-block-image {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.chevereto-block-wrapper.has-description .chevereto-block-title {
+    padding-bottom: 4px;
+}
+
+/* 无障碍功能 */
+.chevereto-block-image:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+/* 加载状态样式 */
+.chevereto-block-image[src=""] {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    min-height: 200px;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* 放大镜效果（可选） */
+.chevereto-block-figure.has-zoom {
+    cursor: zoom-in;
+}
+
+.chevereto-block-figure.has-zoom:hover .chevereto-block-image {
+    transform: scale(1.02);
+}
+
+/* 水印保护（可选） */
+.chevereto-block-image {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+/* 右键禁用（可选，根据需要启用） */
+/*
+.chevereto-block-image {
+    pointer-events: none;
+}
+*/
